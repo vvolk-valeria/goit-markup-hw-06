@@ -23,6 +23,7 @@
     --border-color:#EEEEEE;
     --border-header-color:#ECECEC;
     --border-close-color: rgba(0, 0, 0, 0.1);
+    --border-input-color: rgba(255, 255, 255, 0.3);
     /* shadows */
     --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -34,7 +35,6 @@
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
-   
 }
 
 
@@ -241,6 +241,7 @@ font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
 margin-bottom: 20px;
+display: block;
 }
 
 
@@ -266,12 +267,49 @@ margin-bottom: 20px;
 }
 
 .footer > .container {
-     display: flex;
-     align-items: baseline;
+    display: flex;
+    align-items: baseline;
 }
 .footer-block:not(:last-child) {
    margin-right: 70px;
 }
+
+.footer .btn { 
+    padding: 10px 0;
+    padding-left: 29px;
+    padding-right: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.footer-email {
+    margin-left: 10px;
+    margin: 0;
+    width: 358px;
+    height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    margin-right: 12px;
+    border-radius: 4px;
+    background-color: inherit;
+    border: 1px solid var(--border-input-color);
+ /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+bord */
+}
+
+.subscription {
+    display: flex;
+   
+}
+
+.btn .social-icon {
+    margin-left: 10px;
+}
+ 
+/* Ховер/фокус на кнопку? */
 
 /* ********************************************************************* 
 *************** WebStudio ******************** 
@@ -312,7 +350,7 @@ margin-bottom: 20px;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.87;
     letter-spacing: 0.06em;
     color: var(--white-color);
     background-color: var(--accent-color);
