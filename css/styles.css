@@ -24,6 +24,7 @@
     --border-header-color:#ECECEC;
     --border-close-color: rgba(0, 0, 0, 0.1);
     --border-input-color: rgba(255, 255, 255, 0.3);
+    --border-modal-color: rgba(33, 33, 33, 0.2);
     /* shadows */
     --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -36,7 +37,7 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
-
+ 
 
 .list {
     list-style: none;
@@ -274,6 +275,17 @@ display: block;
    margin-right: 70px;
 }
 
+.footer-block + .footer-block {
+    margin-right: 0;
+}
+
+.footer-block:last-child {
+    display: flex;
+  
+    flex-direction: column;
+    margin-left: auto;
+}
+
 .footer .btn { 
     padding: 10px 0;
     padding-left: 29px;
@@ -296,8 +308,7 @@ display: block;
     border-radius: 4px;
     background-color: inherit;
     border: 1px solid var(--border-input-color);
- /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-bord */
+ /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));*/
 }
 
 .subscription {
@@ -309,7 +320,6 @@ bord */
     margin-left: 10px;
 }
  
-/* Ховер/фокус на кнопку? */
 
 /* ********************************************************************* 
 *************** WebStudio ******************** 
@@ -356,6 +366,7 @@ bord */
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     padding: 10px 32px;
+    min-width: 200px;
     border-radius: 4px;
     border: none;
 
@@ -718,6 +729,7 @@ bord */
     box-shadow: var(--team-shadow);
     width: 528px;
     height: 581px;
+    padding: 40px;
 
     transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 350ms cubic-bezier(0.4, 0, 0.2, 1), opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -729,10 +741,12 @@ bord */
     visibility: hidden;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
 
 .backdrop.is-hidden .modal{
-    transform: translate(-50%, 90%);
-    
+    transform: translate(-50%, -50%) scale(0.5) rotate(360deg);
 }
 
 
@@ -761,8 +775,90 @@ bord */
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-form {
+display: flex;
+flex-direction: column;
 
-  
+
+}
+
+.form-title {
+    display: block;
+    padding-bottom: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        color: var(--titlt-color);
+}
+
+.modal-icon {
+    fill: var(--titlt-color);
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+
+
+
+
+
+.input-title, 
+.consent {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.consent {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.field {
+    /* position: relative; */
+    width: 100%;
+   padding: 12px;
+   margin-bottom: 10px;
+border-radius: 4px;
+
+border: 1px solid var(--border-modal-color);
+
+}
+
+.textarea {
+    resize: none;
+    height: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+
+
+}
+
+.field:hover,
+.field:focus {
+border: 1px solid var(--accent-color);
+outline-style: none;
+}
+
+.consent > .list {
+    text-decoration-line: underline;
+    color: var(--accent-color);
+}
+
+.modal-form > .btn {
+    
+}
+
+/* .field:focus-within.modal-icon {
+fill: var(--accent-color);
+} */
+
 /*  */
 
 .card {
@@ -798,3 +894,6 @@ bord */
     line-height: 1.55;
     color: var(--white-color);
 }
+
+
+/* outline-style: none; на все елементы или только в модалке? */
