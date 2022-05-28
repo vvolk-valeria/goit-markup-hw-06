@@ -9,6 +9,7 @@
     --logo-dark-color: #000000;
     --white-color: #FFFFFF;
     --icon-color:#AFB1B8;
+    --placeholder-color: rgba(117, 117, 117, 0.5);
     /* background colors */
     --main-bg-color:#FFFFFF;
     --second-bg-color:#2F303A;
@@ -308,6 +309,11 @@ display: block;
     background-color: transparent;
     border: 1px solid var(--border-input-color);
     cursor: pointer;
+
+    color: var(--adress-color);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -821,6 +827,7 @@ outline-color: var(--accent-color);
 .form-group,
 .consent {
     display: block; 
+
 }
 
 .modal-icon {
@@ -862,13 +869,17 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-right: 16px;
     margin-bottom: 20px;
     color: var(--titlt-color);
+    font-size: 14px;        
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: var(--titlt-color);
 }
 
 .textarea::placeholder {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    color: var(--placeholder-color);
 }
 
 
