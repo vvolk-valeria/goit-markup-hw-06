@@ -745,7 +745,6 @@ display: block;
 
     transition: visibility 300ms cubic-bezier(0.4, 0, 0.2, 1), 
     opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .modal {
@@ -758,7 +757,6 @@ display: block;
     background-color: var(--main-bg-color);
     box-shadow: var(--team-shadow);
     width: 528px;
-    /* height: 581px; */
     padding: 40px;
 
     transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1), 
@@ -804,11 +802,11 @@ outline-color: var(--accent-color);
 .btn-close:hover .modal-close,
 .btn-close:focus .modal-close {
     fill: var(--accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
     fill: var(--logo-dark-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form {
@@ -883,7 +881,7 @@ outline-color: var(--accent-color);
     letter-spacing: 0.01em;
     color: var(--placeholder-color);
 }
-
+/* 
 .field:hover,
 .field:focus {
 border: 1px solid var(--accent-color);
@@ -898,6 +896,17 @@ outline-color: var(--accent-color);
 .modal-icon:hover,
 .modal-icon:focus {
     fill: var(--accent-color);
+} */
+
+.form-group:hover .modal-icon,
+.form-group:focus-within .modal-icon {
+    fill: var(--accent-color);
+}
+
+.form-group:hover .field,
+.form-group:focus-within .field {
+    border-color: var(--accent-color);
+    outline-color: var(--accent-color);
 }
 
 .input-title,
@@ -933,7 +942,6 @@ outline-color: var(--accent-color);
     color: var(--accent-color);
 }
 
-
 .checkbox {
     position: absolute;
     top: 50%;
@@ -947,20 +955,8 @@ outline-color: var(--accent-color);
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
-    overflow: hidden;
-    
+    overflow: hidden; 
 } 
-
-.checkbox:checked + .icon-checkbox {
-   background-color: var(--accent-color);
-   outline-color: transparent;
-   fill: var(--white-color);
-}
-
-.checkbox:hover +.icon-checkbox,
-.checkbox:focus +.icon-checkbox {
-    outline-color: var(--accent-color);
-}
 
 .icon-checkbox {
     position: absolute;
@@ -982,22 +978,21 @@ outline-color: var(--accent-color);
     outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.checkbox:checked + .icon-checkbox {
+   background-color: var(--accent-color);
+   outline-color: transparent;
+   fill: var(--white-color);
+}
+
+.checkbox:hover +.icon-checkbox,
+.checkbox:focus +.icon-checkbox {
+    outline-color: var(--accent-color);
+}
+
 .modal-form > .btn {
     display: block;
     margin-right: auto;
     margin-left: auto;
-}
-
-
-
-.form-group:hover .modal-icon,
-.form-group:focus-within .modal-icon {
-    fill: var(--accent-color);
-}
-
-.form-group:hover .field,
-.form-group:focus-within .field {
-    border-color: var(--accent-color);
 }
 
 /*  */
